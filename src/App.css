@@ -1,0 +1,144 @@
+
+
+/* ---------------- Body ---------------- */
+body {
+  background-color: #0a0a0a; /* Darker, softer black */
+  color: #ffffff; /* Default text white */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------------- Header ---------------- */
+header {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #ffffff;
+  text-shadow: 2px 2px 6px rgba(205, 200, 41, 0.7);
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffd700; /* Gold */
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+  margin-bottom: 10px;
+}
+
+header p {
+  color: #d32f2f; /* Deep red accent */
+  font-size: 1.2rem;
+}
+
+/* ---------------- Container ---------------- */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* ---------------- Controls ---------------- */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.controls select,
+.controls input[type="file"],
+.controls button {
+  padding: 12px 18px;
+  border-radius: 12px;
+  border: 2px solid #d32f2f;
+  background-color: #1a1a1a; /* Slightly lighter black */
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.controls button {
+  background-color: #d32f2f; /* Crimson red */
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(211, 47, 47, 0.5);
+}
+
+.controls button:hover {
+  background-color: #b71c1c; /* Darker red on hover */
+  box-shadow: 0 6px 18px rgba(183, 28, 28, 0.6);
+}
+
+/* ---------------- Result Card ---------------- */
+.result-card {
+  background: linear-gradient(145deg, #8b0000, #5a0000); /* Dark red gradient */
+  border-radius: 25px;
+  padding: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+  transition: transform 0.3s;
+}
+
+.result-card:hover {
+  transform: translateY(-5px);
+}
+
+.result-card h2 {
+  color: #ffd700; /* Gold */
+  font-size: 2rem;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.result-card h3 {
+  color: #ffd700;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.result-card p,
+.result-card li {
+  color: #ffffff;
+  margin-left: 12px;
+}
+
+.result-card ul {
+  padding-left: 20px;
+}
+
+.result-card .mistake {
+  border-left: 5px solid #d32f2f;
+  padding-left: 12px;
+  margin-bottom: 12px;
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+/* ---------------- Upload History ---------------- */
+.upload-history {
+  background: linear-gradient(145deg, #5a0000, #8b0000);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.7);
+}
+
+.upload-history ul li {
+  cursor: pointer;
+  margin-bottom: 8px;
+  transition: color 0.3s;
+}
+
+.upload-history ul li:hover {
+  color: #ffd700;
+}
+
+/* ---------------- Loading Text ---------------- */
+.loading-text {
+  text-align: center;
+  color: #ffd700;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
