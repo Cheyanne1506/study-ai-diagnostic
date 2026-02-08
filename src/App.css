@@ -2,8 +2,8 @@
 
 /* ---------------- Body ---------------- */
 body {
-  background-color: #0a0a0a; /* Darker, softer black */
-  color: #ffffff; /* Default text white */
+  background-color: #0a0a0a; /* Dark background */
+  color: #ffffff;
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
@@ -12,9 +12,7 @@ body {
 /* ---------------- Header ---------------- */
 header {
   text-align: center;
-  margin-bottom: 50px;
-  color: #ffffff;
-  text-shadow: 2px 2px 6px rgba(205, 200, 41, 0.7);
+  margin-bottom: 40px;
 }
 
 header h1 {
@@ -25,59 +23,74 @@ header h1 {
   margin-bottom: 10px;
 }
 
-header p {
-  color: #d32f2f; /* Deep red accent */
-  font-size: 1.2rem;
-}
-
 /* ---------------- Container ---------------- */
 .container {
-  width: 90%;
-  max-width: 1000px;
+  width: 95%;
+  max-width: 1200px;
   margin: auto;
-}
-
-/* ---------------- Controls ---------------- */
-.controls {
+  padding: 20px 0;
   display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-direction: column;
+  gap: 40px;
 }
 
-.controls select,
-.controls input[type="file"],
-.controls button {
+/* ---------------- Section Blocks ---------------- */
+.create-test, .submit-attempt, .chart-section {
+  background: linear-gradient(145deg, #1f0000, #3a0000);
+  border-radius: 20px;
+  padding: 25px 30px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+}
+
+.create-test h2, .submit-attempt h2, .chart-section h3 {
+  color: #ffd700;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+/* ---------------- Labels ---------------- */
+.create-test label, .submit-attempt label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #ffd700;
+}
+
+/* ---------------- Inputs & Selects ---------------- */
+.create-test select, .submit-attempt select,
+.create-test input[type="file"], .submit-attempt input[type="file"],
+.create-test button, .submit-attempt button {
   padding: 12px 18px;
   border-radius: 12px;
   border: 2px solid #d32f2f;
-  background-color: #1a1a1a; /* Slightly lighter black */
+  background-color: #1a1a1a;
   color: #ffffff;
   font-size: 1rem;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 400px;
 }
 
-.controls button {
-  background-color: #d32f2f; /* Crimson red */
-  color: #ffffff;
+.create-test button, .submit-attempt button {
+  background-color: #d32f2f;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(211, 47, 47, 0.5);
 }
 
-.controls button:hover {
-  background-color: #b71c1c; /* Darker red on hover */
+.create-test button:hover, .submit-attempt button:hover {
+  background-color: #b71c1c;
   box-shadow: 0 6px 18px rgba(183, 28, 28, 0.6);
 }
 
 /* ---------------- Result Card ---------------- */
 .result-card {
-  background: linear-gradient(145deg, #8b0000, #5a0000); /* Dark red gradient */
+  background: linear-gradient(145deg, #8b0000, #5a0000);
   border-radius: 25px;
   padding: 30px;
-  margin-bottom: 40px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.7);
   transition: transform 0.3s;
 }
 
@@ -86,10 +99,10 @@ header p {
 }
 
 .result-card h2 {
-  color: #ffd700; /* Gold */
+  color: #ffd700;
   font-size: 2rem;
   margin-bottom: 15px;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
 }
 
 .result-card h3 {
@@ -98,8 +111,7 @@ header p {
   margin-bottom: 8px;
 }
 
-.result-card p,
-.result-card li {
+.result-card p, .result-card li {
   color: #ffffff;
   margin-left: 12px;
 }
@@ -110,11 +122,10 @@ header p {
 
 .result-card .mistake {
   border-left: 5px solid #d32f2f;
-  padding-left: 12px;
-  margin-bottom: 12px;
   background-color: rgba(0,0,0,0.2);
   border-radius: 8px;
   padding: 10px;
+  margin-bottom: 12px;
 }
 
 /* ---------------- Upload History ---------------- */
@@ -122,17 +133,23 @@ header p {
   background: linear-gradient(145deg, #5a0000, #8b0000);
   border-radius: 20px;
   padding: 25px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.7);
 }
 
 .upload-history ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   cursor: pointer;
-  margin-bottom: 8px;
-  transition: color 0.3s;
+  margin-bottom: 10px;
+  padding: 5px 8px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
 .upload-history ul li:hover {
   color: #ffd700;
+  background-color: rgba(255, 215, 0, 0.1);
 }
 
 /* ---------------- Loading Text ---------------- */
@@ -141,4 +158,19 @@ header p {
   color: #ffd700;
   font-weight: bold;
   font-size: 1.2rem;
+}
+
+/* ---------------- Chart Section ---------------- */
+.chart-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.chart-section label {
+  margin-bottom: 5px;
+}
+
+.chart-section select {
+  max-width: 250px;
 }
