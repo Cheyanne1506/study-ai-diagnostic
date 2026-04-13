@@ -366,7 +366,7 @@ setTests(prev =>
       <label>Upload Test PDF (questions only):</label>
       <input
         type="file"
-        accept=".pdf"
+        accept=".pdf,.doc,.docx"
         onChange={(e) => setTestPDF(e.target.files[0])}
       />
       <br />
